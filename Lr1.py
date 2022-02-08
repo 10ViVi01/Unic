@@ -11,7 +11,7 @@ def print_rez(rez):
     """)
 
 def task_1(x: float, y: float):
-    print_rez(round(cos(x)**2+sin(y)**2))
+    print_rez(round(cos(x)**2+sin(y)**2, 2))
 
 def task_2(n: int):
     S = sum([x**2 for x in range(1,n+1)])
@@ -25,14 +25,15 @@ def task_3(n):
     print(f"Max item: {max(items)}")
     print(f"Multiplication of items elements: {reduce(lambda x, y: x*y, items)}")
     for x in items:
-            if x<0:
-                items.remove(x)
+        if x<0:
+            items.remove(x)
     items.reverse()
     print(f"Positive elements in the reverse line: {items}")
 
 
 
 if __name__ == "__main__":
+
     print("Task 1:")
     x = float(input("\nInput float x   =>  "))
     y = float(input("Input float y   =>  "))
