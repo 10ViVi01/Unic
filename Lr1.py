@@ -33,24 +33,25 @@ def task_3(n):
     print_rez(items)
     print(f"Max item: {max(items)}")
     print(f"Multiplication of items elements: {reduce(lambda x, y: x*y, items)}")
+    new_items = list(items)
     for x in items:
-        if x<0:
-            items.remove(x)
-    items.reverse()
-    print(f"Positive elements in the reverse line: {items}")
+        if x<1:
+            new_items.remove(x)
+    new_items.reverse()
+    print(f"Positive elements in the reverse line: {new_items}")
 
 
 
 if __name__ == "__main__":
 
-    print("Task 1:")
-    x = float(input("\nInput float x   =>  "))
-    y = float(input("Input float y   =>  "))
-    task_1(x, y)
+    # print("Task 1:")
+    # x = float(input("\nInput float x   =>  "))
+    # y = float(input("Input float y   =>  "))
+    # task_1(x, y)
 
-    print("Task 2:")
-    n = int(input("\nInput int N   =>  "))
-    task_2(n)
+    # print("Task 2:")
+    # n = int(input("\nInput int N   =>  "))
+    # task_2(n)
 
     n2 = int(input("Input array length   =>   "))
     task_3(n2)
